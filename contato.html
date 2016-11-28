@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projeto Integrador</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+        <script type='text/javascript' src='js/dynamicpage.js'></script>
+        <script>
+            function alerta(){
+                if (document.getElementById('pessoa1').checked){
+                    window.alert("Mauro agradece seu contato.");
+                }
+                else if (document.getElementById('pessoa2').checked){
+                    window.alert("Paulo agradece seu contato.");
+                }
+                else{
+                    window.alert("Por favor selecione alguém para entrar em contato.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="logo">
+            <img src="banner.png" ><br><br>
+            <hr id="hr">
+                <ul class="group">
+                    <p id="menu">
+                        <a href="exercicios.php" id="link">Exemplos PHP</a>&ensp;|&ensp;
+                        <a href="pag3.html" id="link">pag3</a>&ensp;|&ensp;
+                        <a href="pag4.html" id="link">pag4</a>&ensp;|&ensp;
+                        <a href="contato.html" id="link">Contato</a>
+                    </p>
+                </ul>
+            <hr id="hr">
+        </div>
+        <section id="main-content">
+            <div id="guts">
+        <h1 id="contato">Contato</h1>
+        <div id="divc">
+            <form id="formc">
+                Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="idNome" name="nome" size="51"><br /><br>
+                Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="idemail" name="email" size="51"><br /><br>
+                Pessoa para contato:&nbsp;&nbsp;&nbsp;
+                <input name="pessoa" id="pessoa1" value="Mauro" type="radio" />Mauro
+                <input name="pessoa" id="pessoa2" value="Paulo" type="radio" />Paulo
+                <br><br>
+                Assunto:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select id="idContato" name="tipocontato">
+                    <option value="branco" disabled selected>-Selecione-</option>
+                    <option value="profissional">Profissional</option>
+                    <option value="academico">Academico</option>
+                    <option value="cobranca">Cobrança</option>
+                    <option valeu="outros">Outros</option>
+                </select><br /> <br>
+                Mensagem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <textarea id="idMsg" name="msg" rows="5" cols="53"></textarea><br><br>
+                <button type="reset">Limpar</button><br><br>
+                <button id="enviar" name="enviar" type="submit" onclick="alerta()">
+                    <span>Enviar</span>
+                </button>
+            </form>
+        </div>        
+            </div>
+        </section>
+    </body>
+</html>
