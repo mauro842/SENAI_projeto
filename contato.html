@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projeto Integrador</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+        <script type='text/javascript' src='js/dynamicpage.js'></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <script>
+            function alerta(){
+                localStorage.getItem('pessoa1');
+                localStorage.getItem('pessoa2');
+                if (document.getElementById('pessoa1').checked){
+                    window.alert("Mauro agradece seu contato.");
+                }
+                else if (document.getElementById('pessoa2').checked){
+                    window.alert("Paulo agradece seu contato.");
+                }
+                else{
+                    window.alert("Por favor selecione alguém para entrar em contato.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="logo">
+            <img src="banner.png" ><br><br>
+            <hr id="hr">
+                <ul class="group">
+                    <p id="menu">
+                        <a href="index.html" class="link">Home</a>&ensp;|&ensp;
+                        <a href="exerc.html" class="link">Exemplos PHP</a>&ensp;|&ensp;
+                        <a href="dicas.html" class="link">Dicas</a>&ensp;|&ensp;
+                        <a href="noticias.html" class="link">Notícias</a>&ensp;|&ensp;
+                        <a href="contato.html" class="link">Contato</a>
+                    </p>
+                </ul>
+            <hr id="hr">
+        </div>>
+        <div class="espacamento">
+        </div>
+        <section id="main-content">
+            <div id="guts">
+        <h1 id="contato">Contato</h1>
+        <div id="divc">
+            <form id="formc" method="post">
+                Nome:&nbsp;&nbsp;
+                <input type="text" id="idNome" name="nome" autofocus><br /><br>
+                Email:&nbsp;&nbsp;
+                <input type="text" id="idEmail" name="email"><br /><br>
+                Pessoa para contato:&nbsp;&nbsp;&nbsp;
+                <input name="pessoa" id="pessoa1" value="Mauro" type="radio" />Mauro
+                <input name="pessoa" id="pessoa2" value="Paulo" type="radio" />Paulo
+                <br><br>
+                Assunto:&nbsp;&nbsp;
+                <select id="idContato" name="tipocontato">
+                    <option value="branco" disabled selected>-Selecione-</option>
+                    <option value="profissional">Profissional</option>
+                    <option value="academico">Academico</option>
+                    <option value="cobranca">Cobrança</option>
+                    <option valeu="outros">Outros</option>
+                </select><br /> <br>
+                Mensagem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                <textarea id="idMsg" name="msg" rows="5"></textarea><br><br>
+                <button id="resetar" type="reset">Limpar</button>
+                <button id="enviar" name="enviar" type="submit" onclick="alerta()">
+                    <span>Enviar</span>
+                </button>
+                <div id="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.4898517295464!2d-49.09024088404636!3d-26.504365758680457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94de94dc5dda833d%3A0xe20dd24116b82381!2sSENAI+-+Servi%C3%A7o+Nacional+de+Aprendizagem+Industrial+-+Jaragu%C3%A1+do+Sul!5e0!3m2!1spt-BR!2sbr!4v1480521719679" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </form>
+        </div>      
+        <div class="direitos">Copyright 2016 ® - Todos os Direitos Reservados</div>  
+        </div>
+        </section>
+    </body>
+</html>

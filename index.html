@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Projeto Integrador</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js'></script>
+        <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+        <script type='text/javascript' src='js/dynamicpage.js'></script>
+        <script type="text/javascript" src="html5lightbox/jquery.js"></script>
+        <script type="text/javascript" src="html5lightbox/html5lightbox.js"></script><script>
+            function alerta(){
+                localStorage.setItem('pessoa1',$('#pessoa1').val());
+                localStorage.setItem('pessoa2',$('#pessoa2').val());
+                if (document.getElementById('pessoa1').checked){
+                    window.alert("Mauro agradece seu contato.");
+                }
+                else if (document.getElementById('pessoa2').checked){
+                    window.alert("Paulo agradece seu contato.");
+                }
+                else{
+                    window.alert("Por favor selecione alguém para entrar em contato.");
+                }
+            }
+        </script>
+    </head>
+    <body id="bodyindex">
+        <div id="logo">
+            <img src="banner.png" width="800px" height="200px" ><br><br>
+            <hr id="hr">
+            <nav>
+                <ul class="group">
+                    <p id="menu">
+                        <a href="index.html" class="link">Home</a>&ensp;|&ensp;
+                        <a href="exerc.html" class="link">Exemplos PHP</a>&ensp;|&ensp;
+                        <a href="dicas.html" class="link">Dicas</a>&ensp;|&ensp;
+                        <a href="noticias.html" class="link">Notícias</a>&ensp;|&ensp;
+                        <a href="contato.html" class="link">Contato</a>
+                    </p>
+                </ul>
+            </nav>
+            <hr id="hr">
+        </div>
+        <div class="espacamento">
+        </div>
+        <section id="main-content">
+            <div id="guts"><br>
+                <div id="divintro">
+                    <P class="intro">Fizemos este site com intuito de apresentar um pouco do que aprendemos no CST de Sistemas para Internet, nele mostramos alguns exemplos de php, o uso de javascript e jquery, e CSS.</P>
+                    <P class="intro">Mauro Gaertner<br>Paulo Lada</P>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
